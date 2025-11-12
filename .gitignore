@@ -1,1 +1,16 @@
-"data/\n.ipynb_checkpoints/\n__pycache__/\n*.pyc\n.DS_Store\n.env\n" 
+# Ignore dataset CSVs in data/ but keep sample CSVs
+data/*.csv
+# Explicitly ignore the large downloaded datasets (named versions)
+data/Motor_Vehicle_Collisions_-_Crashes.csv
+data/Motor_Vehicle_Collisions_-_Person.csv
+notebooks/integrated_collisions_*.csv
+notebooks/clean_crashes.csv
+notebooks/clean_persons.csv
+# But do not ignore sample files used for development
+!data/sample_*.csv
+
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+.env

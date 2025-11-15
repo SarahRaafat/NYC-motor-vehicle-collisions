@@ -44,6 +44,10 @@ We clean, integrate, and explore the data, then prepare a merged dataset for an 
 
 ## 4. How to Run
 
+6. **Research Questions**
+- Which borough has the more frequent accidents (crashes)?
+- Which year has the highest casualties? (highest no. of people who died due to crashes) 
+
 ```bash
 pip install -r requirements.txt
 jupyter notebook

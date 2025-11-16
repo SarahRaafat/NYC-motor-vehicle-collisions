@@ -165,13 +165,15 @@ You can deploy on:
 
 **Team of 5 Members**
 
-### **Member 1 – Sarah (You)**
+### **Member 1 – Sarah**
 
 * EDA planning & execution
 * Cleaning documentation and architectural structure
 * Missing-value strategy
-* Integration (User authentication tasks? remove if irrelevant)
-* Final polishing and visualization QA
+* Integration (User authentication tasks)
+* Crash map visualization
+* Export final dashboard-ready dataset
+* Final polishing
 
 ### **Member 2 – Mostafa**
 
@@ -198,8 +200,6 @@ You can deploy on:
 * Dashboard layout
 * Dropdowns, filters
 * Year, Borough, Hour graphs
-* Crash map visualization (optional)
-* Export final dashboard-ready dataset
 
 ---
 

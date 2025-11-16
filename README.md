@@ -76,6 +76,7 @@ The workflow includes **data cleaning**, **exploration**, **integration**, and p
 
   * `clean_crashes.csv`
   * `clean_persons.csv`
+  * `clean_persons_agg.csv`
   * `integrated_collisions.csv`
   * `dashboard_ready.csv`
 
@@ -227,5 +228,6 @@ Inside `/data`:
 
 * `clean_crashes.csv`
 * `clean_persons.csv`
+* `clean_persons_agg.csv`
 * `integrated_collisions.csv`
 * `dashboard_ready.csv`

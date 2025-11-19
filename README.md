@@ -215,8 +215,8 @@ Omar
 *
 *
 Reem
-*
-*
+* Which contributing factors have the highest fatality rate (not just counts)?
+* Are weekends more dangerous than weekdays? (severity pattern analysis)
 Mostafa
 *
 *

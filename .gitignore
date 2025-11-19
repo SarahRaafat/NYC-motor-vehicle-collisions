@@ -1,20 +1,59 @@
+# --------------------------------------
 # Data & large files
+# --------------------------------------
 data/
 *.csv
 *.zip
+*.json
+*.xlsx
 
-# Notebook noise
+# --------------------------------------
+# Jupyter Notebook cache & metadata
+# --------------------------------------
 .ipynb_checkpoints/
-*.log
+**/.ipynb_checkpoints/
+*/.nb-metadata.json
+*/.nb-metadata
+*.nb-metadata.json
 
+# VSCode Jupyter metadata
+**/.vscode/
+*/.jupyterlab-metadata
+
+# Jupyter runtime (local kernel data)
+.jupyter/
+.local/share/jupyter/
+~/.local/share/jupyter/
+
+# --------------------------------------
 # Python cache
-__pycache__/
+# --------------------------------------
+_pycache_/
 *.pyc
+*.pyo
+*.pyd
 
-# OS / editor
+# --------------------------------------
+# OS / editor noise
+# --------------------------------------
 .DS_Store
 Thumbs.db
 
-# Env
+# VSCode settings
+.vscode/
+
+# --------------------------------------
+# Environments
+# --------------------------------------
 .env
+.env.*
 venv/
+.venv/
+env/
+ENV/
+
+# --------------------------------------
+# Logs
+# --------------------------------------
+*.log
+logs/

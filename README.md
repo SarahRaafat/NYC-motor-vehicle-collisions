@@ -198,8 +198,8 @@ You can deploy on:
 ### **Member 5 – Gamila**
 
 * Dashboard layout
-* Dropdowns, filters
-* Year, Borough, Hour graphs
+* Dropdowns filters, visualizations
+* Deployment
 
 ---
 

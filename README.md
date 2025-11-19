@@ -215,11 +215,11 @@ Omar
 *
 *
 Reem
-*
-*
+* Which contributing factors have the highest fatality rate (not just counts)?
+* Are weekends more dangerous than weekdays? (severity pattern analysis)
 Mostafa
-*
-*
+* Which crash hour has the highest rate of fatal collisions per crash?
+* Which contributing factor is linked to the highest fatality rate per crash?
 ---
 
 ## **10. Output Files**

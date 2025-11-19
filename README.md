@@ -198,8 +198,8 @@ You can deploy on:
 ### **Member 5 – Gamila**
 
 * Dashboard layout
-* Dropdowns, filters
-* Year, Borough, Hour graphs
+* Dropdowns filters, visualizations
+* Deployment
 
 ---
 
@@ -212,14 +212,14 @@ Sarah
 * What age group is most vulnerable to severe crashes?
 * Does crash severity vary by time of day? (Peak severity hours) 
 Omar
-*
-*
+* Is there a relationship between persons age and injury?
+* which gender gets into more frequent crashes?
 Reem
 * Which contributing factors have the highest fatality rate (not just counts)?
 * Are weekends more dangerous than weekdays? (severity pattern analysis)
 Mostafa
-*
-*
+* Which crash hour has the highest rate of fatal collisions per crash?
+* Which contributing factor is linked to the highest fatality rate per crash?
 ---
 
 ## **10. Output Files**

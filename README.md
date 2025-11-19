@@ -212,8 +212,8 @@ Sarah
 * What age group is most vulnerable to severe crashes?
 * Does crash severity vary by time of day? (Peak severity hours) 
 Omar
-*
-*
+*Is there a relationship between person’s age and injury?
+*Which gender gets into more frequent crashes?
 Reem
 *
 *

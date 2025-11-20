@@ -198,8 +198,8 @@ You can deploy on:
 ### **Member 5 – Gamila**
 
 * Dashboard layout
-* Dropdowns, filters
-* Year, Borough, Hour graphs
+* Dropdowns filters, visualizations
+* Deployment
 
 ---
 
@@ -215,11 +215,11 @@ Omar
 *Is there a relationship between person’s age and injury?
 *Which person type experiences the highest injury rate?
 Reem
-*
-*
+* Which contributing factors have the highest fatality rate (not just counts)?
+* Are weekends more dangerous than weekdays? (severity pattern analysis)
 Mostafa
-*
-*
+* Which crash hour has the highest rate of fatal collisions per crash?
+* Which contributing factor is linked to the highest fatality rate per crash?
 ---
 
 ## **10. Output Files**

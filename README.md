@@ -219,7 +219,7 @@ Reem
 * Are weekends more dangerous than weekdays? (severity pattern analysis)
 Mostafa
 * Which crash hour has the highest rate of fatal collisions per crash?
-* Which contributing factor is linked to the highest fatality rate per crash? 
+* How does the fatality risk per collision vary by vehicle type?
 ---
 
 ## **10. Output Files**

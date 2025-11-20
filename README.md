@@ -205,21 +205,28 @@ You can deploy on:
 
 ## **9. Research Questions Answered**
 
-Gamila
-* Which borough has the more frequent accidents (crashes)?
-* Which year has the highest casualties? (highest no. of people who died due to crashes) 
-Sarah
-* What age group is most vulnerable to severe crashes?
-* Does crash severity vary by time of day? (Peak severity hours) 
-Omar
-* Is there a relationship between person’s age and injury?
-* Is there a relationship between the number of persons involved and crash fatality rate?
-Reem
-* Which contributing factors have the highest fatality rate (not just counts)?
-* Are weekends more dangerous than weekdays? (severity pattern analysis)
-Mostafa
-* Which crash hour has the highest rate of fatal collisions per crash?
-* Which contributing factor is linked to the highest fatality rate per crash? 
+# Research Questions
+
+## Gamila
+- Which borough has the more frequent accidents (crashes)?
+- Which year has the highest casualties? (highest no. of people who died due to crashes)
+
+## Sarah
+- What age group is most vulnerable to severe crashes?
+- Does crash severity vary by time of day? (Peak severity hours)
+
+## Omar
+- Is there a relationship between person’s age and injury?
+- Is there a relationship between the number of persons involved and crash fatality rate?
+
+## Reem
+- Which contributing factors have the highest fatality rate (not just counts)?
+- Are weekends more dangerous than weekdays? (severity pattern analysis)
+
+## Mostafa
+- Which crash hour has the highest rate of fatal collisions per crash?
+- How does the fatality risk per collision vary by vehicle type?
+
 ---
 
 ## **10. Output Files**

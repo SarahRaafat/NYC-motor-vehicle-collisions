@@ -5,42 +5,14 @@ import dash_mantine_components as dmc
 from dash.exceptions import PreventUpdate
 import pandas as pd
 import os
-import requests
-from io import BytesIO
-import re
 
 #Search works for sample: BROOKLYN Sedan Passing or Lane Usage Improper
 #Search thar works for sample: MANHATTAN Station Wagon/Sport Utility Vehicle Following Too Closely
-url = "https://drive.google.com/uc?export=download&id=1y3fhnsseA4aV4PVtYbq54ZaA1pUfO2VH"
 
-def download_large_file_from_google_drive(url):
-    session = requests.Session()
-    response = session.get(url, stream=True)
+hf_url = "https://huggingface.co/datasets/GimGim79/dashboard/resolve/main/dashboard_ready.csv?download=1"
 
-    # Check if Google responded with "download warning" page
-    confirm_token = None
-    for key, value in response.cookies.items():
-        if key.startswith("download_warning"):
-            confirm_token = value
-
-    if confirm_token:
-        file_id = url.split("id=")[-1]
-        download_url = (
-            "https://drive.google.com/uc?export=download&id=1y3fhnsseA4aV4PVtYbq54ZaA1pUfO2VH"
-            "&id={}&confirm={}".format(file_id, confirm_token)
-        )
-        response = session.get(download_url, stream=True)
-
-    return response.content
-
-try:
-    content = download_large_file_from_google_drive(url)
-    df_dashData = pd.read_csv(BytesIO(content))
-    df_dashData.columns = df_dashData.columns.str.strip().str.upper()
-except Exception as e:
-    print("Failed to load full CSV:", e)
-    df_dashData = pd.DataFrame()
-
+df_dashData = pd.read_csv(hf_url)
+df_dashData.columns = df_dashData.columns.str.strip().str.upper()
 
 #df_dashDataSample = pd.read_csv("data/dashboard_ready_sample.csv")
 

@@ -8,17 +8,10 @@ import os
 import requests
 from io import BytesIO
 
-df = pd.read_csv("data/dashboard_ready.csv")
-
-#decreasing data from 10 million to 20k
-df_sample = df.sample(n=20000, random_state=42)
-
-df_sample.to_csv("data/dashboard_ready_sample.csv", index=False)
-
 #url = "https://drive.google.com/uc?export=download&id=1m8y0uC3mcWmBl5o2o4YXs2NGVLM7WEi7"
 #response = requests.get(url)
 #df_dashData = pd.read_csv(BytesIO(response.content))
-df_dashData = pd.read_csv("data/dashboard_ready_sample.csv")
+df_dashDataSample = pd.read_csv("data/dashboard_ready_sample.csv")
 
 app = Dash(__name__) #creating the app
 server = app.server
@@ -37,19 +30,19 @@ app.layout = dmc.MantineProvider(
     #dmc.Select is basically a dropdown menus so user would be able to filter the data accordingly
     dmc.Select(
         label = "Select a Year", data = [{"label": str(y), "value": str(y)}
-            for y in sorted(df_dashData['CRASH_YEAR'].unique())], id = "Year-select"),
+            for y in sorted(df_dashDataSample['CRASH_YEAR'].unique())], id = "Year-select"),
                 
     dmc.Select(
         label = "Select a Borough", data = [{"label": str(b), "value": str(b)}
-            for b in sorted(df_dashData['BOROUGH'].dropna().unique())], id = "Borough-select"),
+            for b in sorted(df_dashDataSample['BOROUGH'].dropna().unique())], id = "Borough-select"),
                         
     dmc.Select(
         label = "Select Vechile Type", data = [{"label": str(s), "value": str(s)}
-            for s in sorted(df_dashData['VEHICLE TYPE CODE 1'].dropna().unique())], id = "Vehicle-type-select"),
+            for s in sorted(df_dashDataSample['VEHICLE TYPE CODE 1'].dropna().unique())], id = "Vehicle-type-select"),
 
     dmc.Select(
         label = "Select Contributing Factor", data = [{"label": str(f), "value": str(f)}
-            for f in sorted(df_dashData['CONTRIBUTING FACTOR VEHICLE 1'].dropna().unique())], id = "Contributing-factor-select"
+            for f in sorted(df_dashDataSample['CONTRIBUTING FACTOR VEHICLE 1'].dropna().unique())], id = "Contributing-factor-select"
     ),
 
     dmc.Select( 
@@ -90,7 +83,7 @@ def update_visualizations(n_clicks, n_submit, year, borough, vehicle_type, facto
     if not n_clicks and not n_submit:
         raise PreventUpdate
     
-    df = df_dashData.copy()
+    df = df_dashDataSample.copy()
 
     #to make sure zip codes are strings
     df["ZIP CODE"] = (df["ZIP CODE"].astype(str).str.replace(".0", "", regex=False).fillna(""))

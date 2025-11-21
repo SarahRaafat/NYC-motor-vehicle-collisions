@@ -5,8 +5,14 @@ import dash_mantine_components as dmc
 from dash.exceptions import PreventUpdate
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
-df_dashData = pd.read_csv(r"data\dashboard_ready.csv")
+#df_dashData = pd.read_csv("data/dashboard_ready.csv")
+
+csv_path = os.path.join("data", "dashboard_ready.csv")
+if not os.path.exists(csv_path):
+    raise FileNotFoundError(f"{csv_path} not found. Make sure the CSV is in the right folder.")
+df_dashData = pd.read_csv(csv_path)
 
 app = Dash(__name__) #creating the app
 server = app.server
@@ -230,7 +236,8 @@ def update_visualizations(n_clicks, n_submit, year, borough, vehicle_type, facto
 
 #run the app
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render's port, fallback to 5000
+    app.run(host="0.0.0.0", port=port)      
 
 #Searh1: BRONX Sedan Driver Inexperience
 #Search2: QUEENS Bike Unsafe Speed

@@ -6,7 +6,7 @@ from dash.exceptions import PreventUpdate
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df_dashData = pd.read_csv("data\dashboard_ready.csv")
+df_dashData = pd.read_csv(r"data\dashboard_ready.csv")
 
 app = Dash(__name__) #creating the app
 server = app.server

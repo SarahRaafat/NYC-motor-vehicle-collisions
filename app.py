@@ -165,8 +165,7 @@ def update_visualizations(n_clicks, n_submit, year, borough, vehicle_type, facto
         color_continuous_scale='Oranges' 
 )
 
-    scatter_df = df.copy()
-
+    scatter_df = df.sample(min(5000, len(df)))
     fig_zip_scatter = px.scatter(
         scatter_df,
         x="ZIP CODE",
@@ -184,7 +183,7 @@ def update_visualizations(n_clicks, n_submit, year, borough, vehicle_type, facto
     )
 
     #this is basically so we wouldn't get a callback error if no coordinates are available    
-    df = df.dropna(subset = ["LATITUDE","LONGITUDE"])
+    df = df.dropna(subset = ["LATITUDE","LONGITUDE"]).sample(min(5000, len(df)))
     if df.empty:
         return html.Div([
             html.H3("No mappable coordinates available for this filter.", style = {"color":"red"})

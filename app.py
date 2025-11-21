@@ -12,8 +12,17 @@ from io import BytesIO
 #Search thar works for sample: MANHATTAN Station Wagon/Sport Utility Vehicle Following Too Closely
 
 url = "https://drive.google.com/uc?export=download&id=1m8y0uC3mcWmBl5o2o4YXs2NGVLM7WEi7"
-response = requests.get(url)
-df_dashData = pd.read_csv(BytesIO(response.content))
+
+try:
+    response = requests.get(url)
+    response.raise_for_status()  #raise error
+    df_dashData = pd.read_csv(BytesIO(response.content))
+    df_dashData.columns = df_dashData.columns.str.strip().str.upper()
+    
+except Exception as e:
+    print("Failed to load full CSV:", e)
+    df_dashData = pd.DataFrame()  # fallback to empty DataFrame
+
 #df_dashDataSample = pd.read_csv("data/dashboard_ready_sample.csv")
 
 app = Dash(__name__) #creating the app

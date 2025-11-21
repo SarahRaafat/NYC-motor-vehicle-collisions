@@ -7,21 +7,40 @@ import pandas as pd
 import os
 import requests
 from io import BytesIO
+import re
 
 #Search works for sample: BROOKLYN Sedan Passing or Lane Usage Improper
 #Search thar works for sample: MANHATTAN Station Wagon/Sport Utility Vehicle Following Too Closely
+url = "https://drive.google.com/uc?export=download&id=1y3fhnsseA4aV4PVtYbq54ZaA1pUfO2VH"
 
-url = "https://drive.google.com/uc?export=download&id=1m8y0uC3mcWmBl5o2o4YXs2NGVLM7WEi7"
+def download_large_file_from_google_drive(url):
+    session = requests.Session()
+    response = session.get(url, stream=True)
+
+    # Check if Google responded with "download warning" page
+    confirm_token = None
+    for key, value in response.cookies.items():
+        if key.startswith("download_warning"):
+            confirm_token = value
+
+    if confirm_token:
+        file_id = url.split("id=")[-1]
+        download_url = (
+            "https://drive.google.com/uc?export=download&id=1y3fhnsseA4aV4PVtYbq54ZaA1pUfO2VH"
+            "&id={}&confirm={}".format(file_id, confirm_token)
+        )
+        response = session.get(download_url, stream=True)
+
+    return response.content
 
 try:
-    response = requests.get(url)
-    response.raise_for_status()  #raise error
-    df_dashData = pd.read_csv(BytesIO(response.content))
+    content = download_large_file_from_google_drive(url)
+    df_dashData = pd.read_csv(BytesIO(content))
     df_dashData.columns = df_dashData.columns.str.strip().str.upper()
-    
 except Exception as e:
     print("Failed to load full CSV:", e)
-    df_dashData = pd.DataFrame()  # fallback to empty DataFrame
+    df_dashData = pd.DataFrame()
+
 
 #df_dashDataSample = pd.read_csv("data/dashboard_ready_sample.csv")
 

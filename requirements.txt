@@ -1,0 +1,7 @@
+dash
+dash-mantine-components
+pandas
+plotly
+gunicorn
+seaborn
+matplotlib

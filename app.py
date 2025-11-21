@@ -3,16 +3,22 @@ import plotly.express as px
 import pandas as pd
 import dash_mantine_components as dmc
 from dash.exceptions import PreventUpdate
-import matplotlib.pyplot as plt
-import seaborn as sns
+import pandas as pd
 import os
+import requests
+from io import BytesIO
 
-#df_dashData = pd.read_csv("data/dashboard_ready.csv")
+df = pd.read_csv("data/dashboard_ready.csv")
 
-csv_path = os.path.join("data", "dashboard_ready.csv")
-if not os.path.exists(csv_path):
-    raise FileNotFoundError(f"{csv_path} not found. Make sure the CSV is in the right folder.")
-df_dashData = pd.read_csv(csv_path)
+#decreasing data from 10 million to 20k
+df_sample = df.sample(n=20000, random_state=42)
+
+df_sample.to_csv("data/dashboard_ready_sample.csv", index=False)
+
+#url = "https://drive.google.com/uc?export=download&id=1m8y0uC3mcWmBl5o2o4YXs2NGVLM7WEi7"
+#response = requests.get(url)
+#df_dashData = pd.read_csv(BytesIO(response.content))
+df_dashData = pd.read_csv("data/dashboard_ready_sample.csv")
 
 app = Dash(__name__) #creating the app
 server = app.server

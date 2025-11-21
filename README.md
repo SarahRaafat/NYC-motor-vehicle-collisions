@@ -240,4 +240,4 @@ Inside `/data`:
 * `dashboard_ready.csv`
 
 ## **Deployment Links: **
-- For sample data: https://nyc-motor-vehicle-collisions.onrender.com/ 
+- For sample data: https://nyc-motor-vehicle-collisions.onrender.com/ (20k)

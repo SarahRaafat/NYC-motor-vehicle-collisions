@@ -8,13 +8,13 @@ import os
 
 #Search works for sample: BROOKLYN Sedan Passing or Lane Usage Improper
 #Search thar works for sample: MANHATTAN Station Wagon/Sport Utility Vehicle Following Too Closely
-
-hf_url = "https://huggingface.co/datasets/GimGim79/dashboard/resolve/main/dashboard_ready.csv?download=1"
-
-df_dashData = pd.read_csv(hf_url)
-df_dashData.columns = df_dashData.columns.str.strip().str.upper()
-
 #df_dashDataSample = pd.read_csv("data/dashboard_ready_sample.csv")
+
+#hf_url = "https://huggingface.co/datasets/GimGim79/dashboard/resolve/main/dashboard_ready.csv?download=1"
+#df_dashData = pd.read_csv(hf_url)
+#df_dashData.columns = df_dashData.columns.str.strip().str.upper()
+
+df_dashData = pd.read_csv("data/dashboard_ready.csv")
 
 app = Dash(__name__) #creating the app
 server = app.server

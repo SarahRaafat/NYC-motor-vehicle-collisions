@@ -241,3 +241,13 @@ Inside `/data`:
 
 ## **Deployment Links: **
 - For sample data: https://nyc-motor-vehicle-collisions.onrender.com/ (20k)
+Search works for sample: BROOKLYN Sedan Passing or Lane Usage Improper
+Search thar works for sample: MANHATTAN Station Wagon/Sport Utility Vehicle Following Too Closely
+
+- For full data: https://nyc-motor-vehicle-collisions-2.onrender.com/ 
+Searh1: BRONX Sedan Driver Inexperience
+Search2: QUEENS Bike Unsafe Speed
+Search3: BROOKLYN Sedan Passing or Lane Usage Improper
+Filter1: 2021, BRONX, Sedan, Driver Inexperince, Tuesday
+Filter2: 2021, MANHATTAN, Station Wagon/Sport Utility Vehicle, Following Too Closely, Saturday
+Filter3: 2022, QUEENS, Sedan, Unsafe Speed, Saturday

@@ -82,86 +82,33 @@ The workflow includes **data cleaning**, **exploration**, **integration**, and p
 
 ---
 
-## **4. Installation & Setup**
+## **4. Deployment Instructions:
 
-### **1. Clone the project**
+* **Render** (I used render to deploy)
+1. I created the requirements.txt file as well as the procfile and app.py.
+2. Then I updated the csv path because Render is a little different when writing the path.
+3. I also added the dashboard_ready.csv to the git repository so it can be seen.
+4. I commited and pushed into github.
+5. The repository was made public.
+6. On Render I chose "web service" and pasted the repository link in the "insert link for repository" area.
+7. After it built the app and deployed I copied the link and tested on it.
 
-```bash
-git clone <your-repo-link>
-cd nyc-collisions
-```
+## **5. Deployment Links: **
+- For sample data: https://nyc-motor-vehicle-collisions.onrender.com/ (20k)
+Search works for sample: BROOKLYN Sedan Passing or Lane Usage Improper
+Search thar works for sample: MANHATTAN Station Wagon/Sport Utility Vehicle Following Too Closely
 
-### **2. Create a virtual environment (recommended)**
-
-```bash
-python -m venv venv
-venv\Scripts\activate    # Windows
-source venv/bin/activate # macOS/Linux
-```
-
-### **3. Install dependencies**
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## **5. How to Run the Jupyter Notebook**
-
-```bash
-jupyter notebook
-```
-
-Then open:
-**`NYC_Collisions_Analysis.ipynb`**
-Run all cells in order.
+- For full data: https://nyc-motor-vehicle-collisions-2.onrender.com/ 
+Searh1: BRONX Sedan Driver Inexperience
+Search2: QUEENS Bike Unsafe Speed
+Search3: BROOKLYN Sedan Passing or Lane Usage Improper
+Filter1: 2021, BRONX, Sedan, Driver Inexperince, Tuesday
+Filter2: 2021, MANHATTAN, Station Wagon/Sport Utility Vehicle, Following Too Closely, Saturday
+Filter3: 2022, QUEENS, Sedan, Unsafe Speed, Saturday
 
 ---
 
-## **6. How to Run the Dash Dashboard**
-
-Move into the dashboard directory (if applicable):
-
-```bash
-cd dashboard
-python app.py
-```
-
-The dashboard will start at:
-👉 [http://127.0.0.1:8050/](http://127.0.0.1:8050/)
-
----
-
-## **7. Deployment Instructions (Local / Production)**
-
-### **A) Local Deployment**
-
-1. Ensure the virtual environment is activated
-2. Ensure all datasets are in `data/`
-3. Run:
-
-```bash
-python app.py
-```
-
-### **B) Production Deployment (Optional if required by prof)**
-
-You can deploy on:
-
-* **Render**
-* **Railway**
-* **Heroku (if available)**
-* **Dash Enterprise**
-  Include:
-* `requirements.txt`
-* `Procfile` (for Heroku)
-* Your `app.py`
-* Static files
-
----
-
-## **8. Team Members & Contributions**
+## **6. Team Members & Contributions**
 
 **Team of 5 Members**
 
@@ -203,7 +150,7 @@ You can deploy on:
 
 ---
 
-## **9. Research Questions Answered**
+## **7. Research Questions Answered**
 
 # Research Questions
 
@@ -229,7 +176,7 @@ You can deploy on:
 
 ---
 
-## **10. Output Files**
+## **8. Output Files**
 
 Inside `/data`:
 
@@ -239,15 +186,3 @@ Inside `/data`:
 * `integrated_collisions.csv`
 * `dashboard_ready.csv`
 
-## **Deployment Links: **
-- For sample data: https://nyc-motor-vehicle-collisions.onrender.com/ (20k)
-Search works for sample: BROOKLYN Sedan Passing or Lane Usage Improper
-Search thar works for sample: MANHATTAN Station Wagon/Sport Utility Vehicle Following Too Closely
-
-- For full data: https://nyc-motor-vehicle-collisions-2.onrender.com/ 
-Searh1: BRONX Sedan Driver Inexperience
-Search2: QUEENS Bike Unsafe Speed
-Search3: BROOKLYN Sedan Passing or Lane Usage Improper
-Filter1: 2021, BRONX, Sedan, Driver Inexperince, Tuesday
-Filter2: 2021, MANHATTAN, Station Wagon/Sport Utility Vehicle, Following Too Closely, Saturday
-Filter3: 2022, QUEENS, Sedan, Unsafe Speed, Saturday
